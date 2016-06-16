@@ -18,7 +18,7 @@
 		</select>
 	</form>
 	<!--3-3題-->縣市+區域<input type="text" id="address"></br>
-	<!--加分題(需chrome可用)--><input type="button" value="下載">
+	<!--加分題(需chrome可用)--><input type="button" value="下載" onclick="download()">
 	<script type="text/javascript">
 		function get_area(){
 			var a = document.getElementById("loc").value;
@@ -29,6 +29,7 @@
 	        }
 	        xmlhttp.onreadystatechange = function(){
 	            if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+	            	console.log(xmlhttp.responseText);
 	                document.getElementById("area").innerHTML = xmlhttp.responseText;
 	            }
 	        };
@@ -41,6 +42,10 @@
 			var a = document.getElementById("area");
 			var aa = a.options[a.selectedIndex].text;
 			document.getElementById("address").value = cc+aa;
+	    }
+	    function download(){
+	    	var a = document.getElementById("loc").value;
+	    	location.href="output_csv.php?city="+a;
 	    }
 	</script>
 </body>
