@@ -1,0 +1,1 @@
+大家好this這是is一個a有趣php的字串test
