@@ -14,14 +14,16 @@
 				$str = fgets($f);
 				echo $str."<br/>";
 			}
+			fclose($f);
 		}
 		function mailRegex(){
 			$f = fopen("string.txt","r");
 			while (!feof($f)) {
 				$str = fgets($f);
-				$out = preg_replace("/\W/", " ", $str);
+				$out = preg_replace("/\W/", "", $str);
 				echo $out."<br/>";
 			}
+			fclose($f);
 		}
 		function spiltroad(){
 			$f = fopen("road.txt","r");
@@ -40,6 +42,7 @@
 			for ($i=0;$i<$len;$i+=1){
 				echo $r[$i]."<br/>";
 			}
+			fclose($f);
 		}
 	}
 	$test = new PostOffice;

@@ -1,5 +1,6 @@
 <?php
 	if(isset($_GET['city'])){
+		header("Content-Type:text/html; charset=utf-8");
 		require_once("config.php");
 		$code = 0;
 		if($_GET['city']=='Taipei'){
