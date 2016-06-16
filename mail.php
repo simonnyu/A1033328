@@ -29,7 +29,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Send Mail to Someone</title>
+	<title>PHP FINAL</title>
 </head>
 <body>
 	<div align="center">
